@@ -1,6 +1,6 @@
-class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        for value in nums:
-            if nums.count(value) == 1:
-                return value
-        
+def singleNumber(self, nums: List[int]) -> int:
+    unique_numbers = list(set(nums))
+    sum_unique_numbers = sum(unique_numbers)
+    sum_nums = sum(nums)
+
+    return sum_unique_numbers*2 - sum_nums
